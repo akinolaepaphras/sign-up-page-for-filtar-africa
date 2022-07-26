@@ -51,12 +51,14 @@ h1 {
 span {
   color: #bf00ff;
   font-style: italic;
+  text-shadow: 1px 1px black;
 }
 
 p {
   font-size: 1.1rem;
   margin-bottom: 2em;
-  opacity: 0.4;
+  color: gray;
+ 
 }
 
 form {
@@ -101,3 +103,48 @@ button:hover,
 button:focus {
 transform: scale(1.1);
 }
+
+@media (min-width: 800px) {
+
+   .container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex: 1;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+.img-container {
+    width: 100%;
+    order: 2;
+}
+
+main {
+    height: 100%;
+    background-color: #0f1108;
+    padding: 8em 6em;
+}
+
+h1 {
+    color: #fffde2;
+    font-weight: 700;
+}
+
+span {
+    text-shadow: 2px 0 white;
+}
+
+input {
+    margin-top: 1em;
+        font-size: 1.2rem;
+}
+
+button {
+    font-size: 2rem;
+    background-color: #bf00ff;
+    color: #0f1108;
+    margin-top: 2em;
+}
+   }
