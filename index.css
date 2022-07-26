@@ -58,7 +58,6 @@ p {
   font-size: 1.1rem;
   margin-bottom: 2em;
   color: gray;
- 
 }
 
 form {
@@ -80,7 +79,7 @@ input {
 }
 
 input::placeholder {
-    opacity: 0.7;
+  opacity: 0.7;
 }
 
 button {
@@ -96,55 +95,65 @@ button {
   margin-top: 1em;
   margin-bottom: 2em;
   padding: 0.6em 0.6em;
-  transition: transform 200ms ease-in-out;
+ 
 }
 
 button:hover,
 button:focus {
-transform: scale(1.1);
+  opacity: 0.85;
 }
 
 @media (min-width: 800px) {
-
-   .container {
+  .container {
     width: 100%;
     height: 100vh;
-    display: flex;
-    flex: 1;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
+  }
 
-}
-
-.img-container {
+  .img-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 100%;
-    order: 2;
-}
-
-main {
     height: 100%;
+  grid-column: 2 / 3;
+  grid-row: 1 / 3;
+  }
+
+  main {
+    min-height: 100%;
     background-color: #0f1108;
     padding: 8em 6em;
-}
+    grid-row: 1 / 3;
+  }
 
-h1 {
+  h1 {
     color: #fffde2;
     font-weight: 700;
-}
+  }
 
-span {
+  span {
     text-shadow: 2px 0 white;
-}
+  }
 
-input {
+  input {
     margin-top: 1em;
-        font-size: 1.2rem;
-}
+    font-size: 1.3em;
+  }
 
-button {
-    font-size: 2rem;
+  button {
+    font-size: 1.4rem;
     background-color: #bf00ff;
     color: #0f1108;
     margin-top: 2em;
+    transition: transform 200ms ease-in-out;
+  }
+
+  button:hover,
+button:focus {
+  transform: scale(1.1);
 }
-   }
+}
